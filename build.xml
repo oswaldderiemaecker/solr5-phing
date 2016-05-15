@@ -5,8 +5,8 @@
    <exec dir="${project.basedir}"
          command="sudo curl -o /opt/solr/search_api_solr-7.x-1.10.tar.gz https://ftp.drupal.org/files/projects/search_api_solr-7.x-1.10.tar.gz;
 sudo tar xvzf /opt/solr/search_api_solr-7.x-1.10.tar.gz -C /opt/solr;
-sudo mkdir /opt/solr/server/solr/drupal;
 sudo /opt/solr/bin/solr create_core -c drupal;
+sudo mkdir /opt/solr/server/solr/drupal;
 sudo rsync -avz /opt/solr/search_api_solr/solr-conf/5.x/ /opt/solr/server/solr/drupal/conf/"
          checkreturn="true"
          passthru="true"/>
