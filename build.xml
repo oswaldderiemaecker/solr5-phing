@@ -14,7 +14,7 @@ sudo rsync -avz /opt/solr/search_api_solr/solr-conf/5.x/ /opt/solr/server/solr/d
 
 <target name="restart-solr">
    <exec dir="${project.basedir}"
-         command="sudo /opt/solr/bin/solr start -f"
+         command="sudo /opt/solr/bin/solr restart"
          checkreturn="true"
          passthru="true"
          spawn="true"/>
