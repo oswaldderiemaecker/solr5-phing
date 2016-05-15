@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="PHP AMQP Library" default="build" basedir=".">
+<project name="CPHP Solr5 Phing Tasks" default="build" basedir=".">
 <target name="build-index">
    <echo message="Building Solr index"/>
    <exec dir="${project.basedir}"
@@ -16,6 +16,13 @@ sudo rsync -avz /opt/solr/search_api_solr/solr-conf/5.x/ /opt/solr/server/solr/d
          command="sudo /opt/solr/bin/solr restart -f"
          checkreturn="true"
          passthru="true"
-	 spawn="true"/>
+         spawn="true"/>
+</target>
+
+<target name="solr-status">
+   <exec dir="${project.basedir}"
+         command="sudo /opt/solr/bin/solr status"
+         checkreturn="true"
+         passthru="true"/>
 </target>
 </project>
