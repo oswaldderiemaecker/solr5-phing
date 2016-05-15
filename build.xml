@@ -26,4 +26,10 @@ sudo rsync -avz /opt/solr/search_api_solr/solr-conf/5.x/ /opt/solr/server/solr/d
          checkreturn="true"
          passthru="true"/>
 </target>
+
+<target name="solr-query-test">
+   <exec dir="${project.basedir}"
+	 command="sudo curl http://localhost:8983/solr/drupal/select?q=tid:0"
+         checkreturn="true"/>
+</target>
 </project>
